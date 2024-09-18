@@ -1,2 +1,2 @@
-# spring-example-basic-auth
-Aplicação Exemplo de Implementação de Autenticação com Básica.
+# Spring Example Basic Auth
+Aplicação Java com Spring Boot para exemplificar a Implementação de Autenticação Básica em uma API.
