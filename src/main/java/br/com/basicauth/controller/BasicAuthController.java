@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import br.com.basicauth.util.Constants;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Classe controller responsável pela autenticação.
@@ -40,7 +41,7 @@ public class BasicAuthController implements Serializable {
 			
 		}
 		
-		if (!user.equals("basicAuth") || !pass.equals("basicAuth")) {
+		if (!Objects.equals(user, "basicAuth") || !Objects.equals(pass, "basicAuth")) {
 			
 			return ResponseEntity.status(HttpStatus.CONFLICT).body(new ResponseMessages(Constants.STATUS_MESSAGE_CONFLICT_AUTH, HttpStatus.CONFLICT, HttpStatus.CONFLICT.value()));
 			
